@@ -13,17 +13,11 @@ public class Document {
 
     private String title;
 
-    private String description;
-
-    private String fileUrl;
-
     private String fileType;
 
     private Long fileSize;
 
     private String ownerId;
-
-    private Integer downloadCount;
 
     private LocalDateTime createdAt;
 
@@ -35,7 +29,7 @@ public class Document {
     protected void onCreate() {
         createdAt=LocalDateTime.now();
         updatedAt=LocalDateTime.now();
-        downloadCount=0;
+
     }
 
     @PreUpdate
@@ -48,7 +42,7 @@ public class Document {
     }
 
     public void setId(Long id) {
-        id = id;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -57,22 +51,6 @@ public class Document {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getFileUrl() {
-        return fileUrl;
-    }
-
-    public void setFileUrl(String fileUrl) {
-        this.fileUrl = fileUrl;
     }
 
     public String getFileType() {
@@ -114,4 +92,8 @@ public class Document {
     public void setUpdatedAt(LocalDateTime updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+
+
+
 }

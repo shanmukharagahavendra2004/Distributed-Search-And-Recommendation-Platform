@@ -18,10 +18,10 @@ public class User {
 
     public Long getId() {
         return id;
-    }
+    } 
 
     public void setId(Long id) {
-        id = id;
+        this.id = id;
     }
 
     public String getUserName() {

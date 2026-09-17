@@ -1,5 +1,6 @@
 package com.searchplatform.searchservice.service;
 
+import com.searchplatform.searchservice.entity.User;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -27,8 +28,10 @@ public class JWTService {
 
     public String generateToken(String username) {
 
+        User user=new User();
+
         return Jwts.builder()
-                .subject(username)
+                .subject(user.getId().toString())
                 .issuedAt(new Date(System.currentTimeMillis()))
                 .expiration(new Date(
                         System.currentTimeMillis() + 1000L * 60 * 60 * 10
